@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --darkcyan: hsl(158, 36%, 37%);
+    --cream: hsl(30, 38%, 92%);
+    --verydarkblue: hsl(212, 21%, 14%);
+    --darkgrayishblue: hsl(228, 12%, 48%);
+    --white: hsl(0, 0%, 100%);
+}
+
+
+body{
+    background-color: var(--cream);
+    padding: 1rem;
+}
+
+
+.card {
+    background-color: var(--white);
+    display: flex;
+    aspect-ratio: 12 / 8;
+    max-width: 60rem;
+    border-radius: 1rem;
+    overflow: hidden;
+    margin: 1.9rem auto;
+}
+
+.card > img {
+    flex: 50%;
+    max-width: 50%;
+    object-fit: cover;
+}
+
+.card > div {
+    font-family: 'Montserrat';
+    flex: 50%;
+    padding: 3rem;
+}
+
+.card > div h2, .card div .prices {
+    font-family: 'Fraunces';
+    color: var(--verydarkblue);
+}
+
+.card > div h3 {
+    letter-spacing: 0.3rem;
+    color: var(--darkgrayishblue);
+    font-weight: 500;
+}
+
+.card > div h2 {
+    font-size: 3.25rem;
+    line-height: 3.25rem;
+    margin: 2rem 0;
+}
+
+.card > div p {
+    font-size: 1.4rem;
+    line-height: 2rem;
+    color: var(--darkgrayishblue);
+}
+
+.card > div .prices {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    margin: 2rem 0;
+}
+
+.card > div .prices .new-price {
+    color: var(--darkcyan);
+    font-size: 3rem;
+}
+
+.card > div .prices .old-price {
+    color: var(--darkgrayishblue);
+    font-size: 1.3rem;
+    font-weight: 500;
+    text-decoration: line-through;
+}
+
+.card > div button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    background-color: var(--darkcyan);
+    color: var(--white);
+    width: 100%;
+    font-family: inherit;
+    font-size: 1.5rem;
+    padding: 1rem;
+    border: 0;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    margin-top: 2.75rem;
+    transition: 100ms;
+}
+
+.card > div button img {
+    width: 1.25rem;
+}
+
+.card > div button:hover {
+    background-color: hsl(158, 36%, 17%);
+}
+
+
+
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+
+
+@media screen and (max-width: 970px) {
+    .card {
+        flex-direction: column;
+        aspect-ratio: unset;
+    }
+
+    .card img {
+        max-width: 100%;
+        max-height: 40%;
+    }
+
+    .card > div {
+        padding: 1.2rem;
+    }
+}
